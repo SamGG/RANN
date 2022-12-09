@@ -341,7 +341,7 @@ const ANNbool	ANN_ALLOW_SELF_MATCH	= ANNtrue;
 //----------------------------------------------------------------------
 //	Use the following for the L_1 (Manhattan) norm
 //----------------------------------------------------------------------
-#define ANN_POW(v)		std::fabs(v)
+#define ANN_POW(v)		(1.0-(v==0.0))
 #define ANN_ROOT(x)		(x)
 #define ANN_SUM(x,y)		((x) + (y))
 #define ANN_DIFF(x,y)	((y) - (x))
